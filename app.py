@@ -53,7 +53,7 @@ with tab1:
     st.subheader("Preço por barril do petróleo bruto Brent")
 
     #importando a base da pasta
-    df_tabela = pd.read_csv(dados.csv")
+    df_tabela = pd.read_csv("dados.csv")
     # Obter as datas de entrada do usuário no site
     # data_inicio = st.date_input("Digite a data inicial:", min_value=pd.to_datetime("1987-01-01"), max_value=pd.to_datetime("2024-12-31"))
     # data_final = st.date_input("Digite a data final:", min_value=data_inicio, max_value=pd.to_datetime("2024-12-31"))
@@ -137,7 +137,7 @@ with tab2:
 
 
     #importando a base da pasta
-    df_cambio = pd.read_csv(dados_cambio.csv",sep=",")
+    df_cambio = pd.read_csv("dados_cambio.csv",sep=",")
 
     # Garantir que a coluna "Data" seja do tipo datetime
     df_cambio["Data"] = pd.to_datetime(df_cambio["Data"])
