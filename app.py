@@ -104,7 +104,7 @@ with tab1:
     #3° subtitulo
     st.subheader("Previsão")
     #Pegando o modelo
-    caminho_modelo = r'C:\tech4\modelo\modelo.joblib'
+    caminho_modelo = r'modelo.joblib'
     #Input de previsão
     qtd_previsao = int(st.slider("Quantos dias você quer prever: ",1,100))
 
