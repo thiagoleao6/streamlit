@@ -67,7 +67,7 @@ with tab1:
     
 
     #importando a base da pasta
-    df_tabela = pd.read_csv(r"C:\tech4\dados.csv")
+    df_tabela = pd.read_csv("dados.csv")
     # Obter as datas de entrada do usuário no site
     # data_inicio = st.date_input("Digite a data inicial:", min_value=pd.to_datetime("1987-01-01"), max_value=pd.to_datetime("2024-12-31"))
     # data_final = st.date_input("Digite a data final:", min_value=data_inicio, max_value=pd.to_datetime("2024-12-31"))
@@ -145,7 +145,7 @@ with tab1:
     #3° subtitulo
     st.subheader("Previsão")
     #Pegando o modelo
-    caminho_modelo = r'C:\tech4\modelo\modelo.joblib'
+    caminho_modelo = "modelo.joblib"
     #Input de previsão
     qtd_previsao = int(st.slider("Quantos dias você quer prever: ",1,100))
 
@@ -242,7 +242,7 @@ with tab2:
     #Gráfico
 
     #importando a base da pasta
-    df_cambio = pd.read_csv(r"C:\tech4\dados_cambio.csv",sep=",")
+    df_cambio = pd.read_csv("dados_cambio.csv",sep=",")
 
     # Garantir que a coluna "Data" seja do tipo datetime
     df_cambio["Data"] = pd.to_datetime(df_cambio["Data"])
