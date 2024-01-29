@@ -32,7 +32,7 @@ with st.sidebar:
 st.header("Analise Preditiva Flutuação Preço do Petróleo")
 
 #Separando as paginas
-tab0,tab1,tab2,tab3,tab4 = st.tabs(["Inicio","Histórico e Futuro, "Analise 2", "Analise Final","Datasets e fontes"])
+tab0,tab1,tab2,tab3,tab4 = st.tabs(["Inicio","Histórico e Futuro", "Politicas Globais, Nacionais e dolar", "Analise Final","Datasets e fontes"])
 
 
 
@@ -324,6 +324,8 @@ with tab3:
     st.subheader('3.	Necessidade de Monitoramento Contínuo:')
     st.write("➡️ A análise deve ser dinâmica e sujeita a atualizações conforme novas informações e eventos ocorrem.")
 
+
+    st.subheader("Cenário Mundial")
     st.write("No cenário mundial, pode ocorrer restrições de produção em alguns países e a dificuldade em aumentar rapidamente a produção para atender à crescente demanda. Países resolverem fazer altas reservas buscando segurança em cenários hostis como guerras.")
     st.write("Outra questão a ser pontuada é a especulação financeira nos mercados de commodities, com investidores financeiros buscando lucros em meio à alta volatilidade, pode contribuir para picos de preços do petróleo.")
     st.write("Conclui-se que, embora o modelo preditivo forneça uma base para previsões, é crucial reconhecer as limitações e a volatilidade inerente ao ambiente global. Podendo ser úteis, mas a capacidade de adaptar e ajustar as previsões com base em mudanças inesperadas é essencial para uma análise mais robusta.")
