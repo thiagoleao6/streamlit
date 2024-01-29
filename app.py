@@ -29,10 +29,10 @@ with st.sidebar:
     data_final_np = np.datetime64(data_final)
 
 #Titulo do site
-st.header("Dashboard Pós Tech")
+st.header("Analise Preditiva Flutuação Preço do Petróleo")
 
 #Separando as paginas
-tab0,tab1,tab2,tab3,tab4 = st.tabs(["Inicio","Analise 1", "Analise 2", "Analise Final","Datasets e fontes"])
+tab0,tab1,tab2,tab3,tab4 = st.tabs(["Inicio","Histórico e Futuro, "Analise 2", "Analise Final","Datasets e fontes"])
 
 
 
@@ -51,7 +51,7 @@ with tab0:
  #-----------------------------------------------#Primeira Pagina-------------------------------------------------------------   
 with tab1:
     #TItulo da pagina
-    #st.title('Análise preço do Petróleo')
+    #st.title('Evolução Histórica e Predição')
 
     st.subheader("Cenário Global")
 
@@ -83,7 +83,7 @@ with tab1:
 
     # Filtre o DataFrame com base nas datas escolhidas
     df_filtrado = df_tabela[(df_tabela["Data"] > data_inicio_np) & (df_tabela["Data"] < data_final_np)]
-
+    st.write("**Para avaliar a evolução dos anos selecione o período na lateral esquerda da tela.**")
     # Criar o gráfico com as datas filtradas
     fig = px.line(df_filtrado, x='Data', y='Preco Petroleo', title='Gráfico de Linhas do Preço do Petróleo')
 
@@ -94,7 +94,7 @@ with tab1:
     #plotando o grafico no site
     st.plotly_chart(fig)
 
-    st.write("**Para avaliar a evolução dos anos selecione o período na lateral esquerda da tela.**")
+    
     st.write("Ao analisar a variação nas últimas décadas, observamos flutuações significativas, impactando a composição do valor do petróleo")
 
     #2° Subtitulo
@@ -124,7 +124,7 @@ with tab1:
     st.subheader("Análise do modelo")
 
     st.write("Os eventos supracitados refletem, tanto fatores de oferta quanto demanda, além de questões geopolíticas e econômicas. ")
-    st.write("Vale ressaltar que o mercado de petróleo é complexo e muitos fatores podem influenciar suas oscilações, sendo esses alguns dos mais impactantes.")
+    
     st.write("Desta forma modelos preditivos precisam ser atualizados com frequência, juntamente com uma análise do cenário político global.")
 
     st.subheader("GRAFICO PREDIÇÃO")
@@ -185,7 +185,7 @@ with tab2:
 
 #1° subtitulo
     
-    st.write("Aos investidores cabe ressaltar ainda mudanças globais, novos pactos exemplo ESG, agendas globais como 2030,  impactam diretamente nas estratégicas de produção do petróleo, demanda x Oferta")
+    st.write("Aos investidores cabe ressaltar ainda mudanças globais, novos pactos  a exemplo do ESG, agendas globais como 2030,  impactam diretamente nas estratégicas de produção do petróleo, demanda x Oferta")
     st.write("Daremos destaque ao ESG (Ambiental, Social e Governança) que no setor de petróleo tem implicações significativas para o surgimento de novas opções em sua substituição, tais como:")
 
     texto2 = """
@@ -203,7 +203,8 @@ with tab2:
     st.write(texto2)
 
     st.write("Em resumo, a atenção crescente ao ESG no setor de petróleo está impulsionando a diversificação e inovação em fontes de energia, promovendo o surgimento de novas opções mais sustentáveis e contribuindo para a transição para uma matriz energética mais limpa.")
-
+    
+    st.subheader("Derivados do Petróleo")
     st.write("Os subprodutos do petróleo incluem uma ampla variedade de derivados que são obtidos durante o processo de refino. Alguns dos principais subprodutos do petróleo são:")
 
     texto3 = """
@@ -283,8 +284,8 @@ with tab2:
     
     st.subheader("Fatores Nacionais")
     
-    st.write("No Brasil, a política de preços dos combustíveis, especialmente gasolina e diesel, passou de seguir a paridade internacional, com intervenções governamentais diretas desde 2016. Essa abordagem considera variações internacionais e custos de importação, visando controlar a inflação e proteger os consumidores de flutuações abruptas nos preços, que na prática tem o valor impacta pelos tributos e impostos, outras influenciadas na composição dos preços são eventos políticos e econômicos.")
-    st.write("No Brasil o petróleo é negociado na bolsa de valores em forma de contratos no mercado futuro. Estes contratos possuem vencimentos que apresentam grande volatilidade. Por isso são oportunidades muito exploradas por traders. Cada contrato futuro de petróleo é composto por 100 barris. Como o preço do barril no Brasil é negociado em Dólares Americanos, o valor de um contrato futuro de petróleo depende de duas variáveis: o preço do barril e o preço do Dólar.")
+    st.write("No Brasil, a política de preços dos combustíveis, especialmente gasolina e diesel, passou de seguir a paridade internacional, com intervenções governamentais diretas desde 2016. Essa abordagem considera variações internacionais e custos de importação, visando controlar a inflação e proteger os consumidores de flutuações abruptas nos preços, que na prática tem o valor impactado pelos tributos e impostos, outras influenciadas na composição dos preços são eventos políticos e econômicos.")
+    st.write("O petróleo é negociado na bolsa de valores em forma de contratos no mercado futuro. Estes contratos possuem vencimentos que apresentam grande volatilidade. Por isso são oportunidades muito exploradas por traders. Cada contrato futuro de petróleo é composto por 100 barris. Como o preço do barril no Brasil é negociado em Dólares Americanos, o valor de um contrato futuro de petróleo depende de duas variáveis: o preço do barril e o preço do Dólar.")
     st.write("No cenário internacional como exemplo do site Oil Price, o petróleo do Brasil, recebe o nome Lula, conforme demonstrado abaixo:")
 
     st.image('Imagem1.png')
@@ -311,7 +312,7 @@ with tab3:
     
     st.title("Considerações:")
 
-    st.write("A análise de um modelo preditivo prevê uma elevação seguida de uma queda nos valores para o próximo ano acompanhando a tendencia vista em estudos complementares neste documento.")
+    st.write("A análise do modelo preditivo prevê uma elevação seguida de uma queda nos valores para o próximo ano acompanhando a tendencia vista em estudos complementares neste documento.")
     st.write("Porém cabe a ressalva que o modelo pode ter interferências diretas limitadas por fatores externos que podem alterar essa previsão. ")
 
     st.subheader('1.	Cenário Global e Incertezas:')
@@ -323,7 +324,6 @@ with tab3:
     st.subheader('3.	Necessidade de Monitoramento Contínuo:')
     st.write("➡️ A análise deve ser dinâmica e sujeita a atualizações conforme novas informações e eventos ocorrem.")
 
-    st.subheader("X")
     st.write("No cenário mundial, pode ocorrer restrições de produção em alguns países e a dificuldade em aumentar rapidamente a produção para atender à crescente demanda. Países resolverem fazer altas reservas buscando segurança em cenários hostis como guerras.")
     st.write("Outra questão a ser pontuada é a especulação financeira nos mercados de commodities, com investidores financeiros buscando lucros em meio à alta volatilidade, pode contribuir para picos de preços do petróleo.")
     st.write("Conclui-se que, embora o modelo preditivo forneça uma base para previsões, é crucial reconhecer as limitações e a volatilidade inerente ao ambiente global. Podendo ser úteis, mas a capacidade de adaptar e ajustar as previsões com base em mudanças inesperadas é essencial para uma análise mais robusta.")
