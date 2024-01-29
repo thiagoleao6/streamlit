@@ -16,9 +16,11 @@ with st.sidebar:
     st.header("Tech Challenger 4")
     st.header("Grupo 49")
 
-    st.write("Thiago Leão")
-    st.write("Sarah Fernandes")
-    st.write("Naylson")
+
+    st.write("Naylson Araújo RM 350294")
+    st.write("Sarah Fernandes RM 349429")
+    st.write("Thiago Leão RM 349791")
+    
     st.header("Filtro de Data")
 # Obter as datas de entrada do usuário no site
     data_inicio = st.date_input("Digite a data inicial:", min_value=pd.to_datetime("1987-01-01"), max_value=pd.to_datetime("2024-12-31"))
