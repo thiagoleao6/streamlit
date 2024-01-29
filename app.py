@@ -409,10 +409,10 @@ with tab5:
     st.write(texto_de)
 
     st.subheader("3. Criar um aplicativo dentro do site do Streamlit")
-    st.writer("Acesse o site do Streamlit e siga as instruções para criar uma conta. Após criar a conta, siga os passos para conectar sua conta do GitHub.")
-    st.writer("Crie um novo aplicativo no Streamlit, vinculando-o ao seu repositório GitHub. Certifiquese de configurar corretamente o ambiente de execução e as variáveis necessárias para o seu aplicativo.")
+    st.write("Acesse o site do Streamlit e siga as instruções para criar uma conta. Após criar a conta, siga os passos para conectar sua conta do GitHub.")
+    st.write("Crie um novo aplicativo no Streamlit, vinculando-o ao seu repositório GitHub. Certifiquese de configurar corretamente o ambiente de execução e as variáveis necessárias para o seu aplicativo.")
 
-    st.writer("https://streamlit.io/")
+    st.write("https://streamlit.io/")
 
 
     
