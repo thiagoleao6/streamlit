@@ -32,7 +32,7 @@ with st.sidebar:
 st.header("Analise Preditiva Flutuação Preço do Petróleo")
 
 #Separando as paginas
-tab0,tab1,tab2,tab3,tab4 = st.tabs(["Inicio","Histórico e Futuro", "Politicas Globais, Nacionais e dolar", "Analise Final","Datasets e fontes"])
+tab0,tab1,tab2,tab3,tab4, tab5 = st.tabs(["Inicio","Histórico e Futuro", "Politicas Globais, Nacionais e dolar", "Analise Final","Datasets e fontes", "Deploy"])
 
 
 
@@ -373,5 +373,49 @@ with tab4:
     
 
     st.write(links)
+
+
+with tab5:
+    st.title("Documentação do Deploy")
+    st.write("Este guia fornece instruções passo a passo para realizar o deploy do seu aplicativo Streamlit com um modelo de Machine Learning no GitHub.")
+
+    st.subheader("1. Criar um repositório no Github")
+    st.write("Acesse o Github e siga as instruções para criar um novo repositório. Certifique-se de escolher um nome significativo para o seu projeto.")
+    st.write("https://github.com/")
+    
+    st.subheader("2. Subir os arquivos")
+
+    st.write("Certifique-se de ter os seguintes arquivos no seu diretório local:")
+
+    texto_de = """
+                    .Modelo.joblib: Modelo de Machine Learning criado com o GradientBoostingRegressor.
+                    
+                    .gitignore: Arquivo de configuração para ignorar arquivos e diretórios específicos ao versionar no Git.
+
+                    .app.py: Código-fonte do seu Dashboard Streamlit.
+
+                    .dados.csv: Base de dados do preço do barril do Petróleo.
+                    
+                    .dados_cambio.csv: Base de dados do câmbio EUA X Brasil.
+                    
+                    .Logo-pos-tech.png: Imagem do logo da pós tech.
+
+                    .requirements.txt: Lista das bibliotecas e suas versões utilizadas no projeto.
+
+                    .Imagens dos graficos.
+                                            """
+
+
+    st.write(texto_de)
+
+    st.subheader("3. Criar um aplicativo dentro do site do Streamlit")
+    st.writer("Acesse o site do Streamlit e siga as instruções para criar uma conta. Após criar a conta, siga os passos para conectar sua conta do GitHub.")
+    st.writer("Crie um novo aplicativo no Streamlit, vinculando-o ao seu repositório GitHub. Certifiquese de configurar corretamente o ambiente de execução e as variáveis necessárias para o seu aplicativo.")
+
+    st.writer("https://streamlit.io/")
+
+
+    
+
 
 #________________________________________________________________________________________________________________________________________________________________________________
