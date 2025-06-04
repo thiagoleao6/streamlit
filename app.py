@@ -44,8 +44,8 @@ data_final = st.date_input(
     min_value=data_inicio,
     max_value=data_max
 )
-    data_inicio_np = np.datetime64(data_inicio)
-    data_final_np = np.datetime64(data_final)
+data_inicio_np = np.datetime64(data_inicio)
+data_final_np = np.datetime64(data_final)
 
 #Titulo do site
 st.header("Analise Preditiva Flutuação Preço do Petróleo")
