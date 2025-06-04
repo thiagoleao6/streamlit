@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 import joblib
 import numpy as np
-
+import datetime
 st.set_page_config(page_title="Tech Challenger 4🔥")
 
 with st.sidebar:
@@ -16,34 +16,32 @@ with st.sidebar:
     st.header("Tech Challenger 4")
     st.header("Grupo 49")
 
-
     st.write("Naylson Araújo RM 350294")
     st.write("Sarah Fernandes RM 349429")
     st.write("Thiago Leão RM 349791")
     
     st.header("Filtro de Data")
-# Obter as datas de entrada do usuário no site
-  
-# Define o limite máximo como 31/12/2024
-data_max = datetime.date(2024, 12, 31)
 
-# Se a data atual for maior que o limite, usa o limite como valor padrão
-hoje = datetime.date.today()
-valor_padrao = min(hoje, data_max)
+   
+    data_max = datetime.date(2024, 12, 31)
+    hoje = datetime.date.today()
+    valor_padrao = min(hoje, data_max)
 
-data_inicio = st.date_input(
-    "Digite a data inicial:",
-    value=valor_padrao,
-    min_value=datetime.date(1987, 1, 1),
-    max_value=data_max
-)
+    data_inicio = st.date_input(
+        "Digite a data inicial:",
+        value=valor_padrao,
+        min_value=datetime.date(1987, 1, 1),
+        max_value=data_max
+    )
 
-data_final = st.date_input(
-    "Digite a data final:",
-    value=valor_padrao,
-    min_value=data_inicio,
-    max_value=data_max
-)
+    data_final = st.date_input(
+        "Digite a data final:",
+        value=valor_padrao,
+        min_value=data_inicio,
+        max_value=data_max
+    )
+
+# FORA do `with st.sidebar:` — sem indentação aqui
 data_inicio_np = np.datetime64(data_inicio)
 data_final_np = np.datetime64(data_final)
 
