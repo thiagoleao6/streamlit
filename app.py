@@ -23,8 +23,27 @@ with st.sidebar:
     
     st.header("Filtro de Data")
 # Obter as datas de entrada do usuário no site
-    data_inicio = st.date_input("Digite a data inicial:", min_value=pd.to_datetime("1987-01-01"), max_value=pd.to_datetime("2024-12-31"))
-    data_final = st.date_input("Digite a data final:", min_value=data_inicio, max_value=pd.to_datetime("2024-12-31"))
+  
+# Define o limite máximo como 31/12/2024
+data_max = datetime.date(2024, 12, 31)
+
+# Se a data atual for maior que o limite, usa o limite como valor padrão
+hoje = datetime.date.today()
+valor_padrao = min(hoje, data_max)
+
+data_inicio = st.date_input(
+    "Digite a data inicial:",
+    value=valor_padrao,
+    min_value=datetime.date(1987, 1, 1),
+    max_value=data_max
+)
+
+data_final = st.date_input(
+    "Digite a data final:",
+    value=valor_padrao,
+    min_value=data_inicio,
+    max_value=data_max
+)
     data_inicio_np = np.datetime64(data_inicio)
     data_final_np = np.datetime64(data_final)
 
